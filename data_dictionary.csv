@@ -1,0 +1,28 @@
+field_name,data_type,units,description
+timestamp,ISO 8601 datetime,local time,"Five-minute interval start, aligned to XML vital reading time"
+vital_record_count,integer,records,Number of XML vital observations in this interval
+patient_count,integer,patients,Distinct patient IDs observed in XML for this interval
+avg_heart_rate_bpm,decimal,beats/min,Arithmetic mean of heart rates across observed patients
+avg_breathing_rate_per_min,decimal,breaths/min,Arithmetic mean of breathing rates across observed patients
+avg_patient_temperature_F,decimal,degrees Fahrenheit,Arithmetic mean of patient temperatures
+access_events_5min,integer,events,"CSV access events in [timestamp, timestamp + 5 minutes)"
+parent_access_events_5min,integer,events,Access events whose PersonType is Parent
+nurse_access_events_5min,integer,events,Access events whose PersonType is Nurse
+access_granted_known_count,integer,events,Access events with a nonblank AccessGranted value; not a count of granted accesses
+access_granted_missing_count,integer,events,Access events with blank AccessGranted; status unknown
+room_305_temperature_F,decimal,degrees Fahrenheit,Latest available room 305 temperature at or before interval start
+room_305_door_status,string,open/closed,Latest available room 305 door status at or before interval start
+room_305_sensor_timestamp,ISO 8601 datetime,local time,Time of latest available room 305 sensor reading
+room_305_sensor_age_minutes,integer,minutes,Age of room 305 sensor reading relative to interval start
+room_334_temperature_F,decimal,degrees Fahrenheit,Latest available room 334 temperature at or before interval start
+room_334_door_status,string,open/closed,Latest available room 334 door status at or before interval start
+room_334_sensor_timestamp,ISO 8601 datetime,local time,Time of latest available room 334 sensor reading
+room_334_sensor_age_minutes,integer,minutes,Age of room 334 sensor reading relative to interval start
+room_337_temperature_F,decimal,degrees Fahrenheit,Latest available room 337 temperature at or before interval start
+room_337_door_status,string,open/closed,Latest available room 337 door status at or before interval start
+room_337_sensor_timestamp,ISO 8601 datetime,local time,Time of latest available room 337 sensor reading
+room_337_sensor_age_minutes,integer,minutes,Age of room 337 sensor reading relative to interval start
+room_345_temperature_F,decimal,degrees Fahrenheit,Latest available room 345 temperature at or before interval start
+room_345_door_status,string,open/closed,Latest available room 345 door status at or before interval start
+room_345_sensor_timestamp,ISO 8601 datetime,local time,Time of latest available room 345 sensor reading
+room_345_sensor_age_minutes,integer,minutes,Age of room 345 sensor reading relative to interval start
